@@ -1,0 +1,173 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>hnefatafl</title>
+    <meta name="description" content="hnefatafl online webgame">
+    <meta name="author" content="Reuben Castelino">
+
+    <script type="text/javascript" src="hnefatafl.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+
+  </head>
+
+  <body>
+    <div id="gameboard">
+      <table id="board" cellpadding="0" cellspacing="0">
+        <tr>
+          <td id="0,10" class=""><div id="piece" onclick="pieceClicked(0,10)"></div></td>
+          <td id="1,10" class=""><div id="piece" onclick="pieceClicked(1,10)"></div></td>
+          <td id="2,10" class=""><div id="piece" onclick="pieceClicked(2,10)"></div></td>
+          <td id="3,10" class="black"><div id="piece" onclick="pieceClicked(3,10)"></div></td>
+          <td id="4,10" class="black"><div id="piece" onclick="pieceClicked(4,10)"></div></td>
+          <td id="5,10" class="black"><div id="piece" onclick="pieceClicked(5,10)"></div></td>
+          <td id="6,10" class="black"><div id="piece" onclick="pieceClicked(6,10)"></div></td>
+          <td id="7,10" class="black"><div id="piece" onclick="pieceClicked(7,10)"></div></td>
+          <td id="8,10" class=""><div id="piece" onclick="pieceClicked(8,10)"></div></td>
+          <td id="9,10" class=""><div id="piece" onclick="pieceClicked(9,10)"></div></td>
+          <td id="10,10" class=""><div id="piece" onclick="pieceClicked(10,10)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,9" class=""><div id="piece" onclick="pieceClicked(0,9)"></div></td>
+          <td id="1,9" class=""><div id="piece" onclick="pieceClicked(1,9)"></div></td>
+          <td id="2,9" class=""><div id="piece" onclick="pieceClicked(2,9)"></div></td>
+          <td id="3,9" class=""><div id="piece" onclick="pieceClicked(3,9)"></div></td>
+          <td id="4,9" class=""><div id="piece" onclick="pieceClicked(4,9)"></div></td>
+          <td id="5,9" class="black"><div id="piece" onclick="pieceClicked(5,9)"></div></td>
+          <td id="6,9" class=""><div id="piece" onclick="pieceClicked(6,9)"></div></td>
+          <td id="7,9" class=""><div id="piece" onclick="pieceClicked(7,9)"></div></td>
+          <td id="8,9" class=""><div id="piece" onclick="pieceClicked(8,9)"></div></td>
+          <td id="9,9" class=""><div id="piece" onclick="pieceClicked(9,9)"></div></td>
+          <td id="10,9" class=""><div id="piece" onclick="pieceClicked(10,9)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,8" class=""><div id="piece" onclick="pieceClicked(0,8)"></div></td>
+          <td id="1,8" class=""><div id="piece" onclick="pieceClicked(1,8)"></div></td>
+          <td id="2,8" class=""><div id="piece" onclick="pieceClicked(2,8)"></div></td>
+          <td id="3,8" class=""><div id="piece" onclick="pieceClicked(3,8)"></div></td>
+          <td id="4,8" class=""><div id="piece" onclick="pieceClicked(4,8)"></div></td>
+          <td id="5,8" class=""><div id="piece" onclick="pieceClicked(5,8)"></div></td>
+          <td id="6,8" class=""><div id="piece" onclick="pieceClicked(6,8)"></div></td>
+          <td id="7,8" class=""><div id="piece" onclick="pieceClicked(7,8)"></div></td>
+          <td id="8,8" class=""><div id="piece" onclick="pieceClicked(8,8)"></div></td>
+          <td id="9,8" class=""><div id="piece" onclick="pieceClicked(9,8)"></div></td>
+          <td id="10,8" class=""><div id="piece" onclick="pieceClicked(10,8)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,7" class="black"><div id="piece" onclick="pieceClicked(0,7)"></div></td>
+          <td id="1,7" class=""><div id="piece" onclick="pieceClicked(1,7)"></div></td>
+          <td id="2,7" class=""><div id="piece" onclick="pieceClicked(2,7)"></div></td>
+          <td id="3,7" class=""><div id="piece" onclick="pieceClicked(3,7)"></div></td>
+          <td id="4,7" class=""><div id="piece" onclick="pieceClicked(4,7)"></div></td>
+          <td id="5,7" class="white"><div id="piece" onclick="pieceClicked(5,7)"></div></td>
+          <td id="6,7" class=""><div id="piece" onclick="pieceClicked(6,7)"></div></td>
+          <td id="7,7" class=""><div id="piece" onclick="pieceClicked(7,7)"></div></td>
+          <td id="8,7" class=""><div id="piece" onclick="pieceClicked(8,7)"></div></td>
+          <td id="9,7" class=""><div id="piece" onclick="pieceClicked(9,7)"></div></td>
+          <td id="10,7" class="black"><div id="piece" onclick="pieceClicked(10,7)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,6" class="black"><div id="piece" onclick="pieceClicked(0,6)"></div></td>
+          <td id="1,6" class=""><div id="piece" onclick="pieceClicked(1,6)"></div></td>
+          <td id="2,6" class=""><div id="piece" onclick="pieceClicked(2,6)"></div></td>
+          <td id="3,6" class=""><div id="piece" onclick="pieceClicked(3,6)"></div></td>
+          <td id="4,6" class="white"><div id="piece" onclick="pieceClicked(4,6)"></div></td>
+          <td id="5,6" class="white"><div id="piece" onclick="pieceClicked(5,6)"></div></td>
+          <td id="6,6" class="white"><div id="piece" onclick="pieceClicked(6,6)"></div></td>
+          <td id="7,6" class=""><div id="piece" onclick="pieceClicked(7,6)"></div></td>
+          <td id="8,6" class=""><div id="piece" onclick="pieceClicked(8,6)"></div></td>
+          <td id="9,6" class=""><div id="piece" onclick="pieceClicked(9,6)"></div></td>
+          <td id="10,6" class="black"><div id="piece" onclick="pieceClicked(10,6)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,5" class="black"><div id="piece" onclick="pieceClicked(0,5)"></div></td>
+          <td id="1,5" class="black"><div id="piece" onclick="pieceClicked(1,5)"></div></td>
+          <td id="2,5" class=""><div id="piece" onclick="pieceClicked(2,5)"></div></td>
+          <td id="3,5" class="white"><div id="piece" onclick="pieceClicked(3,5)"></div></td>
+          <td id="4,5" class="white"><div id="piece" onclick="pieceClicked(4,5)"></div></td>
+          <td id="5,5" class="king"><div id="piece" onclick="pieceClicked(5,5)"></div></td>
+          <td id="6,5" class="white"><div id="piece" onclick="pieceClicked(6,5)"></div></td>
+          <td id="7,5" class="white"><div id="piece" onclick="pieceClicked(7,5)"></div></td>
+          <td id="8,5" class=""><div id="piece" onclick="pieceClicked(8,5)"></div></td>
+          <td id="9,5" class="black"><div id="piece" onclick="pieceClicked(9,5)"></div></td>
+          <td id="10,5" class="black"><div id="piece" onclick="pieceClicked(10,5)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,4" class="black"><div id="piece" onclick="pieceClicked(0,4)"></div></td>
+          <td id="1,4" class=""><div id="piece" onclick="pieceClicked(1,4)"></div></td>
+          <td id="2,4" class=""><div id="piece" onclick="pieceClicked(2,4)"></div></td>
+          <td id="3,4" class=""><div id="piece" onclick="pieceClicked(3,4)"></div></td>
+          <td id="4,4" class="white"><div id="piece" onclick="pieceClicked(4,4)"></div></td>
+          <td id="5,4" class="white"><div id="piece" onclick="pieceClicked(5,4)"></div></td>
+          <td id="6,4" class="white"><div id="piece" onclick="pieceClicked(6,4)"></div></td>
+          <td id="7,4" class=""><div id="piece" onclick="pieceClicked(7,4)"></div></td>
+          <td id="8,4" class=""><div id="piece" onclick="pieceClicked(8,4)"></div></td>
+          <td id="9,4" class=""><div id="piece" onclick="pieceClicked(9,4)"></div></td>
+          <td id="10,4" class="black"><div id="piece" onclick="pieceClicked(10,4)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,3" class="black"><div id="piece" onclick="pieceClicked(0,3)"></div></td>
+          <td id="1,3" class=""><div id="piece" onclick="pieceClicked(1,3)"></div></td>
+          <td id="2,3" class=""><div id="piece" onclick="pieceClicked(2,3)"></div></td>
+          <td id="3,3" class=""><div id="piece" onclick="pieceClicked(3,3)"></div></td>
+          <td id="4,3" class=""><div id="piece" onclick="pieceClicked(4,3)"></div></td>
+          <td id="5,3" class="white"><div id="piece" onclick="pieceClicked(5,3)"></div></td>
+          <td id="6,3" class=""><div id="piece" onclick="pieceClicked(6,3)"></div></td>
+          <td id="7,3" class=""><div id="piece" onclick="pieceClicked(7,3)"></div></td>
+          <td id="8,3" class=""><div id="piece" onclick="pieceClicked(8,3)"></div></td>
+          <td id="9,3" class=""><div id="piece" onclick="pieceClicked(9,3)"></div></td>
+          <td id="10,3" class="black"><div id="piece" onclick="pieceClicked(10,3)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,2" class=""><div id="piece" onclick="pieceClicked(0,2)"></div></td>
+          <td id="1,2" class=""><div id="piece" onclick="pieceClicked(1,2)"></div></td>
+          <td id="2,2" class=""><div id="piece" onclick="pieceClicked(2,2)"></div></td>
+          <td id="3,2" class=""><div id="piece" onclick="pieceClicked(3,2)"></div></td>
+          <td id="4,2" class=""><div id="piece" onclick="pieceClicked(4,2)"></div></td>
+          <td id="5,2" class=""><div id="piece" onclick="pieceClicked(5,2)"></div></td>
+          <td id="6,2" class=""><div id="piece" onclick="pieceClicked(6,2)"></div></td>
+          <td id="7,2" class=""><div id="piece" onclick="pieceClicked(7,2)"></div></td>
+          <td id="8,2" class=""><div id="piece" onclick="pieceClicked(8,2)"></div></td>
+          <td id="9,2" class=""><div id="piece" onclick="pieceClicked(9,2)"></div></td>
+          <td id="10,2" class=""><div id="piece" onclick="pieceClicked(10,2)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,1" class=""><div id="piece" onclick="pieceClicked(0,1)"></div></td>
+          <td id="1,1" class=""><div id="piece" onclick="pieceClicked(1,1)"></div></td>
+          <td id="2,1" class=""><div id="piece" onclick="pieceClicked(2,1)"></div></td>
+          <td id="3,1" class=""><div id="piece" onclick="pieceClicked(3,1)"></div></td>
+          <td id="4,1" class=""><div id="piece" onclick="pieceClicked(4,1)"></div></td>
+          <td id="5,1" class="black"><div id="piece" onclick="pieceClicked(5,1)"></div></td>
+          <td id="6,1" class=""><div id="piece" onclick="pieceClicked(6,1)"></div></td>
+          <td id="7,1" class=""><div id="piece" onclick="pieceClicked(7,1)"></div></td>
+          <td id="8,1" class=""><div id="piece" onclick="pieceClicked(8,1)"></div></td>
+          <td id="9,1" class=""><div id="piece" onclick="pieceClicked(9,1)"></div></td>
+          <td id="10,1" class=""><div id="piece" onclick="pieceClicked(10,1)"></div></td>
+        </tr>
+        <tr>
+          <td id="0,0" class=""><div id="piece" onclick="pieceClicked(0,0)"></div></td>
+          <td id="1,0" class=""><div id="piece" onclick="pieceClicked(1,0)"></div></td>
+          <td id="2,0" class=""><div id="piece" onclick="pieceClicked(2,0)"></div></td>
+          <td id="3,0" class="black"><div id="piece" onclick="pieceClicked(3,0)"></div></td>
+          <td id="4,0" class="black"><div id="piece" onclick="pieceClicked(4,0)"></div></td>
+          <td id="5,0" class="black"><div id="piece" onclick="pieceClicked(5,0)"></div></td>
+          <td id="6,0" class="black"><div id="piece" onclick="pieceClicked(6,0)"></div></td>
+          <td id="7,0" class="black"><div id="piece" onclick="pieceClicked(7,0)"></div></td>
+          <td id="8,0" class=""><div id="piece" onclick="pieceClicked(8,0)"></div></td>
+          <td id="9,0" class=""><div id="piece" onclick="pieceClicked(9,0)"></div></td>
+          <td id="10,0" class=""><div id="piece" onclick="pieceClicked(10,0)"></div></td>
+        </tr>
+      </table>
+    </div>
+    <div id="stats">
+      <h3 style="text-align:center;"> Stats </h3>
+      <p id="currentPlayer"> currentPlayer: white</p>
+      <p id="clickedPiece"> clickedPiece: </p>
+      <p id="pieceChosen"> pieceChosen: false</p>
+      <p id="pieceChosenCoords"> pieceChosenCoords: </p>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,49 @@
+#gameboard {
+  margin: 0;
+  width: 49%;
+}
+
+#stats {
+  width: 50%;
+  border: 1px solid black;
+  text-align: left;
+}
+
+#board {
+  border: 5px solid #333;
+}
+
+#board td {
+  background-color: grey;
+  height: 50px;
+  width: 50px;
+  border: 3px solid black;
+}
+
+
+#board tr #piece {
+  margin-left: 1px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+  
+#board tr .black #piece {
+  background-color: black; 
+}
+
+#board tr .white #piece {
+  background-color: white;
+}
+
+#board tr .king #piece {
+  background-color: blue;
+}
+
+#board tr .chosen.white #piece {
+  box-shadow: 0 0 16px yellow;
+}
+
+#board tr .chosen.black #piece {
+  box-shadow: 0 0 16px yellow;
+}
