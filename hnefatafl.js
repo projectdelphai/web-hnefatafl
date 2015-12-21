@@ -2,6 +2,7 @@ currentPlayer = "white";
 pieceChosen = false;
 pieceChosenXCoord = 0;
 pieceChosenYCoord = 0;
+kingChosen = false;
 
 function sayHello() {
   alert("Hello World!");
@@ -58,7 +59,10 @@ function checkForCapture(x, y)
 function moveToTile(x, y) {
   pieceChosen = false;
   // move piece to new tile
-  document.getElementById(x + "," + y).setAttribute("class", currentPlayer);
+  if (kingChosen == true)
+    document.getElementById(x + "," + y).setAttribute("class", "king");
+  else
+    document.getElementById(x + "," + y).setAttribute("class", currentPlayer);
   // remove old piece
   document.getElementById(pieceChosenXCoord + "," + pieceChosenYCoord).setAttribute("class", "");
   // switch turns
@@ -74,6 +78,7 @@ function moveToTile(x, y) {
   document.getElementById("clickedPiece").innerHTML = "clickedPieced:";
   document.getElementById("currentPlayer").innerHTML = "currentPlayer: " + currentPlayer;
   checkForCapture(x, y);
+  kingChosen = false;
 }
 
 function pieceClicked(x, y) {
@@ -87,11 +92,16 @@ function pieceClicked(x, y) {
     selectedPiece = document.getElementById(x + "," + y).getAttribute("class");
     if ((selectedPiece == currentPlayer) || (currentPlayer == "white" && selectedPiece == "king"))
     {
+      if (selectedPiece == "king")
+        kingChosen = true;
       // set as piece to move
       pieceChosen = true;
       pieceChosenXCoord = x;
       pieceChosenYCoord = y;
-      document.getElementById(x + "," + y).setAttribute("class", "chosen " + currentPlayer);
+      if (kingChosen == true)
+        document.getElementById(x + "," + y).setAttribute("class", "chosen king");
+      else
+        document.getElementById(x + "," + y).setAttribute("class", "chosen " + currentPlayer);
       // set info in stats
       document.getElementById("pieceChosenCoords").innerHTML = "pieceChosenCoords: " + x + "," + y;
       document.getElementById("pieceChosen").innerHTML = "pieceChosen = true";
@@ -120,7 +130,10 @@ function pieceClicked(x, y) {
       else
       {
         pieceChosen = false;
-        document.getElementById(pieceChosenXCoord + "," + pieceChosenYCoord).setAttribute("class", currentPlayer);
+        if (kingChosen == true)
+          document.getElementById(pieceChosenXCoord + "," + pieceChosenYCoord).setAttribute("class", "king");
+        else
+          document.getElementById(pieceChosenXCoord + "," + pieceChosenYCoord).setAttribute("class", currentPlayer);
         document.getElementById("pieceChosen").innerHTML = "pieceChosen: false";
         document.getElementById("pieceChosenCoords").innerHTML = "pieceChosenCoords:";
         document.getElementById("clickedPiece").innerHTML = "clickedPieced:";
@@ -129,7 +142,10 @@ function pieceClicked(x, y) {
     }
     else if (selectedSpace == currentPlayer)
     {
-      document.getElementById(pieceChosenXCoord + "," + pieceChosenYCoord).setAttribute("class", currentPlayer);
+      if (kingChosen == true)
+        document.getElementById(pieceChosenXCoord + "," + pieceChosenYCoord).setAttribute("class", "king");
+      else
+        document.getElementById(pieceChosenXCoord + "," + pieceChosenYCoord).setAttribute("class", currentPlayer);
       pieceChosenXCoord = x;
       pieceChosenYCoord = y;
       document.getElementById(x + "," + y).setAttribute("class", "chosen " + currentPlayer);

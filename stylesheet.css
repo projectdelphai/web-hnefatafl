@@ -40,6 +40,10 @@
   background-color: blue;
 }
 
+#board tr .chosen.king #piece {
+  box-shadow: 0 0 16px yellow;
+}
+
 #board tr .chosen.white #piece {
   box-shadow: 0 0 16px yellow;
 }
