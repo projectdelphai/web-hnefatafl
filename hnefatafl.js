@@ -3,6 +3,8 @@ pieceChosen = false;
 pieceChosenXCoord = 0;
 pieceChosenYCoord = 0;
 kingChosen = false;
+kingX = 5;
+kingY = 5;
 
 function sayHello() {
   alert("Hello World!");
@@ -10,6 +12,48 @@ function sayHello() {
 
 function displayCurrentPiece(pieceID) {
   alert("Your piece is located at: " + pieceID);
+}
+
+function whiteWin()
+{
+  alert("white wins!");
+}
+
+function blackWin()
+{
+  alert("black wins!");
+}
+
+function checkForWin()
+{
+  if (kingX == 0 && kingY == 0)
+    whiteWin();
+  else if (kingX == 10 && kingY == 10)
+    whiteWin();
+  else if (kingX == 10 && kingY == 0)
+    whiteWin();
+  else if (kingX == 0 && kingY == 10)
+    whiteWin();
+
+  topPiece =  document.getElementById(kingX + "," + (kingY+1))
+  bottomPiece =  document.getElementById(kingX + "," + (kingY-1))
+  leftPiece =  document.getElementById((kingX-1) + "," + kingY)
+  rightPiece =  document.getElementById((kingX+1) + "," + kingY)
+
+  var neighbors = [ topPiece, bottomPiece, leftPiece, rightPiece ];
+  sum = 0;
+  
+  for (index = 0; index < neighbors.length; index++) {
+    if (neighbors[index] == null)
+      continue;
+    if (neighbors[index].getAttribute("class") == "black") {
+      sum++;
+    }
+  }
+
+  if (sum == 4)
+    blackWin();
+ 
 }
 
 function checkForCapture(x, y)
@@ -60,7 +104,12 @@ function moveToTile(x, y) {
   pieceChosen = false;
   // move piece to new tile
   if (kingChosen == true)
+  {
+    kingX = x;
+    kingY = y;
     document.getElementById(x + "," + y).setAttribute("class", "king");
+    kingChosen = false;
+  }
   else
     document.getElementById(x + "," + y).setAttribute("class", currentPlayer);
   // remove old piece
@@ -73,18 +122,12 @@ function moveToTile(x, y) {
     currentPlayer = "white";
   }
   // set info in stats
-  document.getElementById("pieceChosen").innerHTML = "pieceChosen: false";
-  document.getElementById("pieceChosenCoords").innerHTML = "pieceChosenCoords:";
-  document.getElementById("clickedPiece").innerHTML = "clickedPieced:";
   document.getElementById("currentPlayer").innerHTML = "currentPlayer: " + currentPlayer;
   checkForCapture(x, y);
-  kingChosen = false;
+  checkForWin();
 }
 
 function pieceClicked(x, y) {
-  // set clickedPiece in stats
-  document.getElementById("clickedPiece").innerHTML = "clickedPiece: " + x + "," + y;
-
   // check if initial piece to move has been chosen
   if (pieceChosen == false)
   {
@@ -102,9 +145,6 @@ function pieceClicked(x, y) {
         document.getElementById(x + "," + y).setAttribute("class", "chosen king");
       else
         document.getElementById(x + "," + y).setAttribute("class", "chosen " + currentPlayer);
-      // set info in stats
-      document.getElementById("pieceChosenCoords").innerHTML = "pieceChosenCoords: " + x + "," + y;
-      document.getElementById("pieceChosen").innerHTML = "pieceChosen = true";
     }
   }
   else
@@ -137,7 +177,7 @@ function pieceClicked(x, y) {
         document.getElementById("pieceChosen").innerHTML = "pieceChosen: false";
         document.getElementById("pieceChosenCoords").innerHTML = "pieceChosenCoords:";
         document.getElementById("clickedPiece").innerHTML = "clickedPieced:";
-
+        kingChosen = false;
       }
     }
     else if (selectedSpace == currentPlayer)
@@ -149,10 +189,7 @@ function pieceClicked(x, y) {
       pieceChosenXCoord = x;
       pieceChosenYCoord = y;
       document.getElementById(x + "," + y).setAttribute("class", "chosen " + currentPlayer);
-      // set info in stats
-      document.getElementById("pieceChosenCoords").innerHTML = "pieceChosenCoords: " + x + "," + y;
-      document.getElementById("pieceChosen").innerHTML = "pieceChosen = true";
-
+      kingChosen = false;
     }
   }
 }
