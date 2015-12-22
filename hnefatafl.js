@@ -6,8 +6,20 @@ kingChosen = false;
 kingX = 5;
 kingY = 5;
 
-function sayHello() {
-  alert("Hello World!");
+function startGame()
+{
+  document.getElementById("startgame").style.display = "none";
+  document.getElementById("chooseGameMode").style.display = "block";
+}
+
+function chooseSinglePlayer()
+{
+  document.getElementById("chooseGameMode").style.display = "none";
+  document.getElementById("gameboard").style.display = "block";
+}
+
+function chooseMultiPlayer()
+{
 }
 
 function displayCurrentPiece(pieceID) {
