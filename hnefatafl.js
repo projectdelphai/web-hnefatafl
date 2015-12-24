@@ -16,6 +16,7 @@ function chooseSinglePlayer()
 {
   document.getElementById("chooseGameMode").style.display = "none";
   document.getElementById("gameboard").style.display = "block";
+  document.getElementById("stats").style.display = "block";
 }
 
 function chooseMultiPlayer()
@@ -28,12 +29,14 @@ function displayCurrentPiece(pieceID) {
 
 function whiteWin()
 {
-  alert("white wins!");
+  document.getElementById("winner").innerHTML = "White Wins!";
+  document.getElementById("winner").style.display = "block";
 }
 
 function blackWin()
 {
-  alert("black wins!");
+  document.getElementById("winner").innerHTML = "Black Wins!";
+  document.getElementById("winner").style.display = "block";
 }
 
 function checkForWin()
@@ -104,7 +107,7 @@ function checkForCapture(x, y)
           sum++;
         }
       }
-      if (sum == 2)
+      if (sum >= 2)
       {
         document.getElementById(newX + "," + newY).setAttribute("class", "");
       }
@@ -134,7 +137,7 @@ function moveToTile(x, y) {
     currentPlayer = "white";
   }
   // set info in stats
-  document.getElementById("currentPlayer").innerHTML = "currentPlayer: " + currentPlayer;
+  document.getElementById("currentPlayer").innerHTML = "Current Player: " + currentPlayer;
   checkForCapture(x, y);
   checkForWin();
 }
