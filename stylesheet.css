@@ -23,9 +23,20 @@
   overflow: hidden;
 }
 
+#currentPlayer {
+  text-align: center;
+}
+
 #winner {
+  text-align: center;
   display: none;
 }
+
+#howtomove { display: block; }
+#capture { display: none; }
+#king { display: none; }
+#whitewin { display: none; }
+#blackwin { display: none; }
 
 #board td {
   background-color: grey;

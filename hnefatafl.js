@@ -5,6 +5,12 @@ pieceChosenYCoord = 0;
 kingChosen = false;
 kingX = 5;
 kingY = 5;
+secondShown = false;
+thirdShown = false;
+fourthShown = false;
+fifthShown = false;
+cloneSaved = false;
+var divClone;
 
 function startGame()
 {
@@ -27,16 +33,24 @@ function displayCurrentPiece(pieceID) {
   alert("Your piece is located at: " + pieceID);
 }
 
+function disableBoard()
+{
+}
+
 function whiteWin()
 {
+  document.getElementById("currentPlayer").style.display = "none";
   document.getElementById("winner").innerHTML = "White Wins!";
   document.getElementById("winner").style.display = "block";
+  disableBoard();
 }
 
 function blackWin()
 {
+  document.getElementById("currentPlayer").style.display = "none";
   document.getElementById("winner").innerHTML = "Black Wins!";
   document.getElementById("winner").style.display = "block";
+  disableBoard();
 }
 
 function checkForWin()
@@ -140,6 +154,27 @@ function moveToTile(x, y) {
   document.getElementById("currentPlayer").innerHTML = "Current Player: " + currentPlayer;
   checkForCapture(x, y);
   checkForWin();
+  if (secondShown == false)
+  {
+    document.getElementById("capture").style.display = "block";
+    secondShown = true;
+  }
+  else if (thirdShown == false)
+  {
+    document.getElementById("king").style.display = "block";
+    thirdShown = true;
+  }
+  else if (fourthShown == false)
+  {
+    document.getElementById("whitewin").style.display = "block";
+    fourthShown = true;
+  }
+  else if (fifthShown == false)
+  {
+    document.getElementById("blackwin").style.display = "block";
+    fifthShown = true;
+  }
+
 }
 
 function pieceClicked(x, y) {
