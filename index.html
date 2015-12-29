@@ -45,7 +45,7 @@
           <td id="7,9" class=""><div id="piece" onclick="pieceClicked(7,9)"></div></td>
           <td id="8,9" class=""><div id="piece" onclick="pieceClicked(8,9)"></div></td>
           <td id="9,9" class=""><div id="piece" onclick="pieceClicked(9,9)"></div></td>
-          <td id="10,9" class=""><div id="piece" onclick="pieceClicked(10,9)"></div></td>
+          <td id="10,9" class="king"><div id="piece" onclick="pieceClicked(10,9)"></div></td>
         </tr>
         <tr>
           <td id="0,8" class=""><div id="piece" onclick="pieceClicked(0,8)"></div></td>
@@ -92,7 +92,7 @@
           <td id="2,5" class=""><div id="piece" onclick="pieceClicked(2,5)"></div></td>
           <td id="3,5" class="white"><div id="piece" onclick="pieceClicked(3,5)"></div></td>
           <td id="4,5" class="white"><div id="piece" onclick="pieceClicked(4,5)"></div></td>
-          <td id="5,5" class="king"><div id="piece" onclick="pieceClicked(5,5)"></div></td>
+          <td id="5,5" class=""><div id="piece" onclick="pieceClicked(5,5)"></div></td>
           <td id="6,5" class="white"><div id="piece" onclick="pieceClicked(6,5)"></div></td>
           <td id="7,5" class="white"><div id="piece" onclick="pieceClicked(7,5)"></div></td>
           <td id="8,5" class=""><div id="piece" onclick="pieceClicked(8,5)"></div></td>
@@ -167,7 +167,10 @@
       </table>
       <div id="stats">
         <h2 id="currentPlayer"> Current Player: white</h2>
-        <div ><h1 id="winner"></h1></div>
+        <div >
+          <h1 id="winner"></h1>
+          <input type="button" id="playagain" value="Play Again" onclick="playAgain()">
+        </div>
         <h3 style="text-align:center;"> Game Info </h3>
         <div id="help">
           <div id="howtomove">

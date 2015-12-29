@@ -10,6 +10,7 @@ thirdShown = false;
 fourthShown = false;
 fifthShown = false;
 cloneSaved = false;
+disabled = false;
 var divClone;
 
 function startGame()
@@ -33,8 +34,17 @@ function displayCurrentPiece(pieceID) {
   alert("Your piece is located at: " + pieceID);
 }
 
+function playAgain()
+{
+  document.getElementById("winner").style.display = "none";
+  document.getElementById("playagain").style.display = "none";
+  disabled = false;
+  currentPlayer = "white";
+}
+
 function disableBoard()
 {
+  disabled = true;
 }
 
 function whiteWin()
@@ -42,6 +52,7 @@ function whiteWin()
   document.getElementById("currentPlayer").style.display = "none";
   document.getElementById("winner").innerHTML = "White Wins!";
   document.getElementById("winner").style.display = "block";
+  document.getElementById("playagain").style.display = "block";
   disableBoard();
 }
 
@@ -50,6 +61,7 @@ function blackWin()
   document.getElementById("currentPlayer").style.display = "none";
   document.getElementById("winner").innerHTML = "Black Wins!";
   document.getElementById("winner").style.display = "block";
+  document.getElementById("playagain").style.display = "block";
   disableBoard();
 }
 
@@ -178,6 +190,8 @@ function moveToTile(x, y) {
 }
 
 function pieceClicked(x, y) {
+  if (disabled == true)
+    return;
   // check if initial piece to move has been chosen
   if (pieceChosen == false)
   {

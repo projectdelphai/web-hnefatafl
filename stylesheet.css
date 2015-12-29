@@ -16,7 +16,7 @@
 #stats {
   margin: 0 25% 0 0;
   padding: 2% 2% 2% 5%;
-  width: 25%;
+  width: 40%;
   border: 1px solid black;
   text-align: left;
   display: none;
@@ -30,6 +30,12 @@
 #winner {
   text-align: center;
   display: none;
+}
+
+#playagain {
+  display: none;
+  margin: 0 25% 0 25%;
+  width: 50%;
 }
 
 #howtomove { display: block; }
