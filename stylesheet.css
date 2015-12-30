@@ -2,7 +2,6 @@
   margin: 0;
   width: 100%;
   display: none;
-  border: 1px solid blue;
   overflow: hidden;
 }
 
@@ -17,7 +16,6 @@
   margin: 0 25% 0 0;
   padding: 2% 2% 2% 5%;
   width: 40%;
-  border: 1px solid black;
   text-align: left;
   display: none;
   overflow: hidden;
