@@ -9,8 +9,8 @@ secondShown = false;
 thirdShown = false;
 fourthShown = false;
 fifthShown = false;
-cloneSaved = false;
 disabled = false;
+cloneSaved = false;
 var divClone;
 
 function startGame()
@@ -36,6 +36,12 @@ function displayCurrentPiece(pieceID) {
 
 function playAgain()
 {
+  var clone = divClone.cloneNode(true);
+  var child = document.getElementById("board");
+  var parentNode = child.parentNode;
+  parentNode.replaceChild(clone, child);
+  kingX = 5;
+  kingY = 5;
   document.getElementById("winner").style.display = "none";
   document.getElementById("playagain").style.display = "none";
   disabled = false;
@@ -190,8 +196,15 @@ function moveToTile(x, y) {
 }
 
 function pieceClicked(x, y) {
+  if (cloneSaved == false)
+  {
+    divClone = document.getElementById("board").cloneNode(true);
+    cloneSaved = true;
+  }
+
   if (disabled == true)
     return;
+
   // check if initial piece to move has been chosen
   if (pieceChosen == false)
   {
